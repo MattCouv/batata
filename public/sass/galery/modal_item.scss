@@ -1,0 +1,45 @@
+.modal__item {
+  position: fixed;
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  /* give it dimensions */
+  min-height: 100vh;
+  display: none;
+  z-index: 200;
+  padding-top: 50px;
+}
+
+.modal__item--open {
+  display: block;
+}
+
+.modal__popup {
+  z-index: 300;
+  height: 80vh;
+  margin: 0 auto;
+  max-width: 560px;
+
+  color: #fff;
+
+  background-color: $red-pink;
+
+  img {
+    // width: 100%;
+    // position: absolute;
+    display:block;
+    margin:auto;
+    max-height: 50vh;
+  }
+
+  iframe {
+    height: calc((800px*315px)/100%);
+    @media (min-width: 500px) {
+      height: 315px;
+    }
+  }
+  h2,p {
+    padding-left: 20px;
+  }
+}

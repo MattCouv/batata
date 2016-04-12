@@ -1,0 +1,36 @@
+.nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+}
+
+.nav__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  li {
+    background: $red-pink;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.nav__menu--dropdown ul{
+  list-style: none;
+}
+
+.nav__close {
+  position: absolute;
+  top: 20px;
+  right:20px;
+  background: $red-pink;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50%;
+  padding: 20px;
+}

@@ -1,0 +1,26 @@
+<?php
+namespace Core\Database;
+use \PDO;
+use \Core\FluentPDO\FluentPDO;
+/**
+ *
+ */
+class Fpdo extends Database
+{
+  /**
+	 * [$pdo objet PDO]
+	 * @var [objet]
+	 */
+  private $fpdo;
+
+  public function getFPDO(){
+		if ($this->fpdo === null) {
+			$pdo = $this->getPDO();
+			$fpdo = new FluentPDO($pdo);
+			$this->fpdo = $fpdo;
+		}
+		return $this->fpdo;
+	}
+}
+
+ ?>

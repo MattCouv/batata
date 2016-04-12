@@ -1,0 +1,315 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+*{
+  margin:0;
+  padding: 0;
+  color:white;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+html, body {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.pattern {
+  background: none;
+}
+.g {
+  		padding: 0.25em;
+			overflow: hidden;
+		}
+		.g li {
+			float: left;
+			width: 50%;
+			padding: 0.25em;
+		}
+		.g img {
+			display: block;
+		}
+		.g li:nth-child(odd) {
+			clear: left;
+		}
+
+		@media screen and (min-width: 40em) {
+			.g li {
+		    	width: 33.3333333333333333%;
+		  	}
+		  	.g li:nth-child(3n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(odd) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 55em) {
+			.g li {
+		    	width: 25%;
+		  	}
+		  	.g li:nth-child(4n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(3n+1) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 72em) {
+			.g li {
+		    	width: 20%;
+		  	}
+		  	.g li:nth-child(5n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(4n+1) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 90em) {
+			.g li {
+		    	width: 16.666666666%;
+		  	}
+		  	.g li:nth-child(6n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(5n+1) {
+				clear: none;
+			}
+		}
+.hero {
+  height: 300px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f229;
+}
+.content {
+  padding: 0 10px;
+}
+nav {
+  position: fixed;
+}
+@media (min-width:426px) {
+  .main {
+    display: flex;
+    flex-flow: row;
+  }
+  .hero {
+    height: 100vh;
+    width: 35%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+img{
+  width:100%;
+}
+
+.accueil--btn{
+  position: absolute;
+  bottom: 10%;
+  height: 30px;
+  font-size: 20px;
+  width: 10%;
+  left:45%;
+  text-align: center;
+  background:  #FF5252;
+}
+
+#btn2{
+
+  float:right;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-right:10px;
+}
+
+#modale{
+  position: fixed;
+  visibility: hidden;
+  bottom: 100%;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  transition:all 1s;
+  z-index: 100;
+}
+
+#modale img{
+  margin:10px;
+}
+
+:target{
+  bottom: 0 !important;
+  visibility: visible !important;
+
+}
+
+.galerie{
+  position: absolute;
+  left:15%;
+  width: 70%;
+}
+.accueil--titre{
+  position: fixed;
+  z-index: 99;
+  left:35%;
+  width: 30%;
+  text-align: center;
+  top:25px;
+  background:#FF5252;
+}
+.popup{
+  position: fixed;
+  z-index: 999;
+  max-height: auto;
+  max-width: 80%;
+  left: 10%;
+  top:10%;
+  display: none;
+  border: solid #FF5252;
+  background-color: white;
+  margin: auto;
+}
+
+.popup--close{
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color:#FF5252;
+  border: none;
+  color: white;
+  z-index: 9999;
+}
+
+.popup--nom,.popup--desc{
+    color: #1976D2;
+    margin: 5px;
+}
+.popup img{
+  max-height: 70vh;
+  width: auto;
+}
+
+
+.retour{
+  position: fixed;
+  width:90px;
+  height: 50px;
+  padding: auto;
+  right: 0px;
+  top: 0px;
+  background:#FF5252;
+  color:white;
+  font-size: 25px;
+  border:none;
+  padding: 6px;
+  text-decoration: none;
+}
+.retour:hover{
+  text-decoration: none;
+}
+body{
+    overflow: hidden;
+  font-family: 'Noto Sans', sans-serif;
+  margin:0;
+}
+header{
+  width:50px;
+  margin-left: 0px;
+  background:#FF5252;
+  height:50px;
+  line-height:50px;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  left: 0%;
+  margin: auto;
+  line-height:45px;
+  padding:0px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.croix{
+  background:none;
+  position:absolute;
+  left: 0%;
+  margin: auto;
+  padding:0px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:10%; background:#131313;  margin-left:0px;position:absolute; text-align:center;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {
+  display: block;
+  padding:15px 0 15px 0;
+  border-bottom:#1d1f20 1px solid;}
+.menu li:hover{
+   background:#181818;}
+.menu ul li a {
+  margin: 0px;
+  color:#fff;}
+.menu ul li a:hover {
+  color: #fff;
+  text-decoration:none;}
+.menu a{
+  text-decoration:none;
+  color:white;}
+.menu a:hover{
+  color:white;
+}
+
+.glyphicon-home{
+  color:white;
+  font-size:1.5em;
+  margin-top:5px;
+  margin:0 auto;
+}
+.accueil--scene li img{
+  width: 150%;
+  height: auto;
+  position: relative;
+  top:-100px;
+  left: -100px;
+}
