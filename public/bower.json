@@ -1,0 +1,22 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/MattCouv/batata",
+  "authors": [
+    "MattCouv <matth.couvreur@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "parallax": "^2.1.3"
+  }
+}
